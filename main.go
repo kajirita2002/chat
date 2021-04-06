@@ -22,9 +22,9 @@ func (t *templateHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	t.templ.Execute(w, r)
 }
 
-func main() {
-	var addr = flag.String("addr", ":8080", "The address of the application")
+var addr = flag.String("addr", ":8080", "The address of the application")
 
+func main() {
 	// parse the flags
 	flag.Parse()
 	r := newRoom()
